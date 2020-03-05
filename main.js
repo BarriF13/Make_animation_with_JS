@@ -2,12 +2,18 @@
 
 var counter = 10;
 var item = document.getElementById("nav");
-  item.innerHTML = "you will redirect to another page in "+counter+" second";
+var stop = document.getElementById("stop");
+stop.onclick = function(){
+  clearInterval(timer);
+};
+
+
+  item.innerHTML = "you will be redirecting to another page in "+counter+" second";
 
 function show()
 {
     counter--;
-    item.innerHTML = "you will redirect to another page in "+counter+" second";
+    item.innerHTML = "you will be redirecting to another page in "+counter+" second";
 
     if(counter ==0){
       clearInterval(timer);
